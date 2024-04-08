@@ -22,7 +22,7 @@ serverFiles:
           labels:
             severity: warning
           annotations:
-            host: "{{ $labels.kubernetes_io_hostname }}"
+            host: "{{ $labels.kubernetes_node }}"
             summary: "{{ $labels.kubernetes_node }} Host is low on memory. Only {{ $value }}% left"
             description: "{{ $labels.kubernetes_node }} node is low on memory. Only {{ $value }}% left"
         - alert: KubePersistentVolumeErrors
